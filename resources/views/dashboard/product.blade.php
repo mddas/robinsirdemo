@@ -19,7 +19,7 @@
     <div class="show">     
       </div>
   <table class="table table-striped"><!--table table-dark table-striped--->
-  <thead>git 
+  <thead>
     <tr>
       <th scope="col">#</th>
       <th scope="col">Client Name</th>
@@ -41,7 +41,7 @@
       </td>
     
       <td>
-        <a href="#"><button>Download</button></a>
+        <a href="/product/@if(json_decode($data['image'])!=null){{json_decode($data['image'])[0]}}@endif"><button>View</button></a>
         <!--<img src="/product/@if(json_decode($data['image'])!=null){{json_decode($data['image'])[0]}}@endif" alt="VIEW" height="70px" width="50px">--->
       </td>
       <td>
