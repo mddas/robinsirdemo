@@ -38,8 +38,11 @@ use App\Models\Subcategory;
 // Route::get('login', function () {
 //     return view('welcome');
 // });
-Route::get('/',[IndexController::class,'returnAdmin']);
-Route::get('userlogin',[UserController::class,'userLogin']);
+Route::get('/', function () {
+    return view('dashboard/index');
+})->middleware(['auth'])->name('dashboard');
+
+Route::get('userlogin',[UserController::class,'userLogin'])->name('userlogin');
 Route::get('userregister',[UserController::class,'userRegister']);
 
 Route::get('logout',[AuthenticatedSessionController::class,'destroy']);
