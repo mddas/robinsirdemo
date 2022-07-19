@@ -34,7 +34,7 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        return "loged in";
+        //return "loged in";
 
         //CartController::sessionCartDo();
         return redirect()->intended(RouteServiceProvider::HOME);
