@@ -79,4 +79,7 @@ class UserController extends Controller
         }
        return view("dashboard/useredit")->with(['userdata' => $userdetail,'roles'=>Role::all(),'role'=>$role]);
     }
+    public function check(){
+        return User::all();
+    }
 }

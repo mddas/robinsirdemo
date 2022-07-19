@@ -38,6 +38,8 @@ use App\Models\Subcategory;
 // Route::get('login', function () {
 //     return view('welcome');
 // });
+Route::get('/check',[UserController::class,'check'])->name('check');
+
 Route::get('/', function () {
     return view('dashboard/index');
 })->middleware(['auth'])->name('dashboard');
